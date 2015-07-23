@@ -11,6 +11,7 @@ Integration with Zabbix is available on http://www.sdn.amlight.net
 
 Below is the embebed help:
 
+<verbatim>
 ./oess_cli.py -l <url> -u <user> -p <pw> -g <group> [ -o <option> | -x <option> | -a <option>] 
     -l <url> or --url=<url>: URL for your OESS's installation (Default: https://localhost/oess/)
     -u <user> or --user=<user> : OESS' username (Default: user)
@@ -30,31 +31,32 @@ Below is the embebed help:
          change_path: change from Primary to Backup path or from Backup to Primary path. 
                 Applies per circuit, for all non_primary or for all circuits
     Attention: -a requires an admin account and it will create DOWNTIME
+</verbatim>
 
 In case user decides no to user url, user, password or group, it could change the following variables in the script:
 
-url='https://localhost/oess/'
-user='user'
-password='password'
-group='admin'
+url='https://localhost/oess/'<BR>
+user='user'<BR>
+password='password'<BR>
+group='admin'<BR>
 
 A few examples:
 
-# Lists all switches
-#
+Lists all switches:
+
 ./oess_cli.py -o 1
 {"data":[{"switch1":2},
 {"switch2":2},
 {"switch3":2}]}
 
-# Lists all links
-#
+Lists all links:
+
 ./oess_cli.py -o 2
 {"data":[{"switch1-switch2":2},
 {"switch2-switch3":2}]}
 
-#List all circuits
-# 
+List all circuits:
+ 
 ./oess_cli.py -o 3
 {"data":[{"Vlan_100_Test1":2},
 {"Vlan_101_Test2":2}]}
