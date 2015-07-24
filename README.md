@@ -72,4 +72,4 @@ List circuits going through a specific link
 Vlan_101_Test2
 ```
 
-Params -t and -z are used for Zabbix integration and their utilization will be explained on http://www.sdn.amlight.net
+Params -t and -z are used for Zabbix integration and their utilization will be explained on http://amlight.net/?page_id=1204
